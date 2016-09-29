@@ -1,12 +1,15 @@
 package com.tdw.service;
 
-import com.tdw.dao.XmlUserDao;
+import com.tdw.dao.UserDao;
 import com.tdw.domain.User;
 import com.tdw.exception.MsgException;
+import com.tdw.factory.DaoFactory;
 
 public class UserService {
 
-	private XmlUserDao dao = new XmlUserDao();
+	// private XmlUserDao dao = new XmlUserDao();
+	//private MySqlUserDao dao = new MySqlUserDao();
+	private UserDao dao = DaoFactory.getFactory().getDao();
 
 	/**
 	 * ×¢²áÓÃ»§
